@@ -55,7 +55,7 @@ fi
 
 #Realign for indels PT2
 if [ ! -f $SAMPLE.realign.bam ]; then
-    java -Xmx16g -jar $GATK -T IndelRealigner -R $REFERENCE.fa -I $SAMPLE.bam --targetIntervals $SAMPLE.intervals -o $SAMPLE.realign.bam -nct $PBS_NUM_PPN
+    java -Xmx16g -jar $GATK -T IndelRealigner -R $REFERENCE.fa -I $SAMPLE.bam --targetIntervals $SAMPLE.intervals -o $SAMPLE.realign.bam
 fi
 
 #Actually, finally call variants

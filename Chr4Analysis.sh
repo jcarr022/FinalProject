@@ -22,3 +22,5 @@ fi
 if [ ! -f $SAMPLE.g.vcf ]; then
 java -Xmx32g -jar $GATK -T HaplotypeCaller -R $REFERENCE.fa -I $SAMPLE.bam -ERC GVCF -o $SAMPLE.g.vcf -nct $PBS_NUM_PPN -L Chr4
 fi
+
+#Joes change
